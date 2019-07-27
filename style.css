@@ -1,9 +1,11 @@
 body {
+    /* giving background color and font styling for the body of the page */
     font: 18px arial, sans-serif;
     background: #eee;
   }
   
   #animals {
+    /* setting the width of the animal divs that will hold the gifs */
     width: 70%;
   }
   
@@ -46,10 +48,12 @@ body {
   
   button:hover,
   input[type="submit"]:hover {
+    /* setting the background of the button to change when hovered */
     background: #334e4d;
   }
   
   button.active {
+    /* setting the background of the button after it has been clicked */
     background: #334e4d;
   }
   
