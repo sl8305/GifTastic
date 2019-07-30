@@ -26,6 +26,8 @@ body {
     font-weight: 700;
   }
   
+  /* sets the width of the input to take the whole div */
+  /* sets the font to be 18px and margin and height spacing */
   input[type="text"] {
     width: 100%;
     height: 30px;

@@ -3,16 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
+  <!-- title of the page/ name of the tab-->
   <title>Animaltastic</title>
+  
+  <!-- Links the css stylesheet -->
+  <!-- css is used to style the page - font size, font type, spacing, etc -->
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-
+  <!-- Empty div with the Id animal-buttons that will be referenced with Jquery to dynamically add the animal buttons -->
   <div id="animal-buttons">
 
   </div>
 
+  <!-- Input form -->
   <form id="animal-form">
     <label for="animal-input">Add an animal</label>
     <input type="text" id="animal-input"><br>
@@ -23,7 +28,11 @@
 
   </div>
 
+  <!-- importing the aJax library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Links the Javascript file at the end to make sure the elements on the page are created before its referenced. -->
+  <!-- The script tag references the javascript with via the source code assignment -->
   <script src="app.js"></script>
   
 </body>
