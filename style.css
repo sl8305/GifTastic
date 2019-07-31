@@ -6,20 +6,24 @@ body {
   
   #animals {
     /* setting the width of the animal divs that will hold the gifs */
+    /* the other 30% is for the input form */
     width: 70%;
   }
   
+  /* spacing for the animal image divs */
   .animal-item {
     float: left;
     padding: 10px;
   }
   
+  /* floats the input form to the right with 30% width so it doesn't take up the whole page */
   form {
     float: right;
     width: 30%;
     padding: 20px;
   }
   
+  /* gives the label a little spacing and block format so the input and button are below it */
   label {
     display: block;
     margin-bottom: 10px;
@@ -35,6 +39,7 @@ body {
     font-size: 18px;
   }
   
+ /* formating the spacing and coloring of the submit button in the input form */
   button,
   input[type="submit"] {
     padding: 5px 20px;
