@@ -145,9 +145,14 @@ $(document).ready(function() {
       // event.preventDefault is a jquery method that doesn't accept any arguments
       // the default action of the event will not be triggered 
       event.preventDefault();
+      
+      //variable newAnimal stores the value of the input at the index of 0 using the .eq() method.
+      // .eq(0) references the input element at the first index
       var newAnimal = $("input").eq(0).val();
+
   
       // if the length of the new animal is greater than 2 then it will push it to the animals array
+      // as long as the string value is larger than two letters the following will happen
       if (newAnimal.length > 2) {
         // the new input is added to animals array at the end
         animals.push(newAnimal);
