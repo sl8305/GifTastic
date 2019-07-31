@@ -17,15 +17,20 @@
 
   </div>
 
-  <!-- Input form -->
+  <!-- Input form using the special id animal-form -->
   <form id="animal-form">
+    <!-- Label gives the input for a title to describe what is being added. "for" is used to give the label a reference that it will be attatched to. In this case it is matched with the input with the same id -->
     <label for="animal-input">Add an animal</label>
+    <!-- input type is defined as text instead email, checkbox, date or a number of other types. This input can be referenced to store the string input for later use as well as give the label something to attatch itself to -->
     <input type="text" id="animal-input"><br>
+    <!-- Input is a button called Submit that can be referenced later with jQuery. When this button is clicked a javascript function will store the input and create a new button with input string -->
     <input id="add-animal" type="submit" value="Submit">
   </form>
 
-  <div id="animals">
 
+  <div id="animals">
+  <!-- div with the animals id that is referenced with jquery -->
+  <!-- This is the divs the images/gifs are added to with the rating attatched -->
   </div>
 
   <!-- importing the aJax library -->
