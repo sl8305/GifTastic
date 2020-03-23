@@ -12,6 +12,21 @@
 
 #animal-buttons {
     margin: 5%; 
+    margin-bottom:2%;
     padding-left: 13%;
     padding-right: 13%;
+}
+
+.botBorder {
+    border-bottom: 3px solid #659a98;
+}
+
+#header {
+    color: #eee;
+    background: #659a98;
+}
+
+#addRow {
+    justify-content: center;
+    margin-bottom: 3%;
 }
