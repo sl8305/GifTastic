@@ -33,7 +33,8 @@ $(document).ready(function() {
         a.text(arrayToUse[i]);
         
         // appends each button to the button div
-        $(areaToAddTo).append(a);
+        $(a).appendTo(areaToAddTo);
+        // $(areaToAddTo).append(a);
       }
     }
   
@@ -108,13 +109,15 @@ $(document).ready(function() {
             animalImage.addClass("animal-image");
   
             // the pargraph with the rating is added to the animal div created at the start of the loop
-            animalDiv.append(p);
+            p.appendTo(animalDiv);
+
             // the image variable that stores the still and animated versions of each animal button are appened to the corresponding animal div
-            animalDiv.append(animalImage);
-  
+            animalImage.appendTo(animalDiv);
+
             // jquery is used to append each set of ratings with animal images/gifs to the empty animals div
             // there should be 10 by the end of the loop
-            $("#animals").append(animalDiv);
+            $(animalDiv).appendTo('#animals');
+
           }
         });
     });
