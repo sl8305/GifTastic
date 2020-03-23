@@ -1,0 +1,15 @@
+#animals {
+    /* setting the width of the animal divs that will hold the gifs */
+    /* the other 30% is for the input form */
+    width: 70%;
+}
+
+    /* spacing for the animal image divs */
+.animal-item {
+    float: left;
+    padding: 10px;
+}
+
+#animal-buttons {
+    margin: 5%; 
+}
