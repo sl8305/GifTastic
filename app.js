@@ -60,7 +60,7 @@ $(document).ready(function() {
       //    1) first reference the gif search api
       //    2) then use the type variable to change depending on the animal button that was referenced
       //    3) ends with the apikey in order to use said api (permission to access the api)
-      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=15";
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=15";
       // tail end of the api key includes instructions to pull a maximum of 10 images/gifs
   
       // using the jquery ajax method to preform the get method
