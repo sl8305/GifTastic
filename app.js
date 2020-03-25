@@ -2,6 +2,7 @@
 // this is needed to make sure Jquery can refernce the correct elements after they are created. 
 // w/o this Jquery would reference elements before they are created and not "work"
 $(document).ready(function() {
+    $('#animal-input').empty();
 
     // array of preset animals
     var animals = [
@@ -10,7 +11,7 @@ $(document).ready(function() {
       "hedgehog", "hermit crab", "gerbil", "pygmy goat", "chicken",
       "capybara", "teacup pig", "serval", "salamander", "frog"
     ];
-  
+    
     // function dynamically adds buttons and assigns classes and text to each button
     function populateButtons(arrayToUse, classToAdd, areaToAddTo) {
       // Clears the div where the gifs will populate
@@ -76,49 +77,58 @@ $(document).ready(function() {
         .then(function(response) {
           // variable is created to store the results of the get method (info retrieved from accessing the api)
           var results = response.data;
-  
-          // loops through the entire list of information pulled from the api
-          // in this case it is looping through the 10 image objects
-          for (var i = 0; i < results.length; i++) {
-            // creation of the div with the class animal-item for each object. 
-            var animalDiv = $("<div class=\"animal-item\">");
-  
-            // variable that dynamically stores the rating for each of the image/gif objects
-            var rating = results[i].rating;
-  
-            // p variable stores the creation of a p tag with the text 
-            //  1) "Rating " concatonated with the value of the rating stored above.
-            var p = $("<p>").text("Rating: " + rating);
-  
-            // two sets of variables store the still image and gif or animated version of each object.
-            var animated = results[i].images.fixed_height.url;
-            var still = results[i].images.fixed_height_still.url;
-  
-            // the animalImage variable stores the creation of an image tag.
-            //  each are then given the attributes of 
-            //    1) the source code for the still image
-            //    2) the attribut of still with the still url
-            //    3) the source code for the animated image
-            //    4) the data type of data state still 
-            //    4) the class animal-image is given to each set of images using the .addClass method
-            var animalImage = $("<img>");
-            animalImage.attr("src", still);
-            animalImage.attr("data-still", still);
-            animalImage.attr("data-animate", animated);
-            animalImage.attr("data-state", "still");
-            animalImage.addClass("animal-image");
-  
-            // the pargraph with the rating is added to the animal div created at the start of the loop
-            p.appendTo(animalDiv);
+          // console.log(results);
+          
+          // if we get data then we will create the button
+          if (response.data.length>0) {
+            
+            // loops through the entire list of information pulled from the api
+            // in this case it is looping through the 10 image objects
+            for (var i = 0; i < results.length; i++) {
+              // creation of the div with the class animal-item for each object. 
+              var animalDiv = $("<div class=\"animal-item\">");
+    
+              // variable that dynamically stores the rating for each of the image/gif objects
+              var rating = results[i].rating;
+    
+              // p variable stores the creation of a p tag with the text 
+              //  1) "Rating " concatonated with the value of the rating stored above.
+              var p = $("<p>").text("Rating: " + rating);
+    
+              // two sets of variables store the still image and gif or animated version of each object.
+              var animated = results[i].images.fixed_height.url;
+              var still = results[i].images.fixed_height_still.url;
+    
+              // the animalImage variable stores the creation of an image tag.
+              //  each are then given the attributes of 
+              //    1) the source code for the still image
+              //    2) the attribut of still with the still url
+              //    3) the source code for the animated image
+              //    4) the data type of data state still 
+              //    4) the class animal-image is given to each set of images using the .addClass method
+              var animalImage = $("<img>");
+              animalImage.attr("src", still);
+              animalImage.attr("data-still", still);
+              animalImage.attr("data-animate", animated);
+              animalImage.attr("data-state", "still");
+              animalImage.addClass("animal-image");
+    
+              // the pargraph with the rating is added to the animal div created at the start of the loop
+              p.appendTo(animalDiv);
 
-            // the image variable that stores the still and animated versions of each animal button are appened to the corresponding animal div
-            animalImage.appendTo(animalDiv);
+              // the image variable that stores the still and animated versions of each animal button are appened to the corresponding animal div
+              animalImage.appendTo(animalDiv);
 
-            // jquery is used to append each set of ratings with animal images/gifs to the empty animals div
-            // there should be 10 by the end of the loop
-            $(animalDiv).appendTo('#animals');
-
+              // jquery is used to append each set of ratings with animal images/gifs to the empty animals div
+              // there should be 10 by the end of the loop
+              $(animalDiv).appendTo('#animals');
+            }
+            
           }
+          else {
+            alert("The api does not have what you are looking for. Please try again");
+          }
+
         });
     });
   

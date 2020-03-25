@@ -101,4 +101,30 @@ button.active {
     margin: 7%;
 }
 
+.footer {
+    padding: 10px;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    bottom: 0px;
+    text-align: center;
+    width:100%;
+    background:#659a98;
+    color: #eee;
+}
 
+.footerText {
+    font-size: 14px;
+    margin: 0px;
+    line-height: 1.5em;
+}
+
+.footerIcon {
+    height:50px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#learnMoreLinks {
+    margin: auto;
+}
