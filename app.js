@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     // array of preset animals
     var animals = [
-      "dog", "cat", "rabbit", "hamster", "skunk", "goldfish",
+      "dog", "cat", "rabbit", "skunk", "goldfish",
       "bird", "ferret", "turtle", "sugar glider", "chinchilla",
       "hedgehog", "hermit crab", "gerbil", "pygmy goat", "chicken",
       "capybara", "teacup pig", "serval", "salamander", "frog"
