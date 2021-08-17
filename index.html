@@ -6,7 +6,7 @@
   <title>GIF Search</title>
 
   <!-- Favicon for address bar -->
-  <link rel="icon" type='images/png' href="/images/logo-32x32.png">
+  <link rel="icon" type='images/png' href="/images/favicon.ico">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -17,61 +17,63 @@
 </head>
 
 <body>
-
-  <div id='header'>   
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg nav-bg-color navbar-light botBorder" id="nav"> 
-        <a class='navbar-brand ml-4' href='#header'><h1>Gif-Tastic</h1></a>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- start of navbar links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <!-- Portfolio -->
-                <li class="nav-item mr-5">
-                  <a class="nav-link" href='https://sl8305.github.io/Portfolio_Shad/'><h5>Portfolio</h5><span class="sr-only">(current)</span></a>
-                </li>
-
-                <!-- linkedIn -->
-                <li class="nav-item mr-5">
-                    <a class="nav-link" href='https://www.linkedin.com/in/shad-lee-724621162/'><h5>LinkedIn</h5><span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
-
-
-  <div id='main'  class="container-fluid">
-
-    <div id='buttonRow' class="row">
-      <div id="animal-buttons"> 
-        <!-- Empty div with the Id animal-buttons that will be referenced with Jquery to dynamically add the animal buttons -->
-      </div>
-    </div>
-
-    <div id='addRow' class="row">
-      <form id="animal-form">
-        <!-- Label gives the input for a title to describe what is being added. "for" is used to give the label a reference that it will be attatched to. In this case it is matched with the input with the same id -->
-        <label for="animal-input">Add an animal</label>
-        <!-- input type is defined as text instead email, checkbox, date or a number of other types. This input can be referenced to store the string input for later use as well as give the label something to attatch itself to -->
-        <input type="text" id="animal-input"><br>
-        <!-- Input is a button called Submit that can be referenced later with jQuery. When this button is clicked a javascript function will store the input and create a new button with input string -->
-        <input id="add-animal" type="submit" value="Submit">
-      </form>
-    </div>
-
-    <div id='gifRow' class="row">
-      <div id="animals">
-        <!-- div with the animals id that is referenced with jquery -->
-        <!-- This is the divs the images/gifs are added to with the rating attatched -->
-      </div>
-    </div>
+  <div id='page-container'>
+    <div id='content-wrap'>
   
-  </div>  
+      <div id='header'>   
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg nav-bg-color navbar-light botBorder" id="nav"> 
+            <a class='navbar-brand ml-4' href='#header'><h1>Gif-Tastic</h1></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- start of navbar links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Portfolio -->
+                    <li class="nav-item mr-5">
+                      <a class="nav-link" href='https://sl8305.github.io/Portfolio_Shad/'><h5>Portfolio</h5><span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <!-- linkedIn -->
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href='https://www.linkedin.com/in/shad-lee-724621162/'><h5>LinkedIn</h5><span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+      </div>
+
+
+      <div id='content' class='container-fluid'>
+        <div id='presetButtons' class='row'>
+          <div id="animal-buttons"> 
+            <!-- Empty div with the Id animal-buttons that will be referenced with Jquery to dynamically add the animal buttons -->
+          </div>
+        </div>
+
+        <div id='createButtons'>
+          <form id="animal-form">
+            <!-- Label gives the input for a title to describe what is being added. "for" is used to give the label a reference that it will be attatched to. In this case it is matched with the input with the same id -->
+            <label for="animal-input">Add an animal</label>
+            <!-- input type is defined as text instead email, checkbox, date or a number of other types. This input can be referenced to store the string input for later use as well as give the label something to attatch itself to -->
+            <input type="text" id="animal-input"><br>
+            <!-- Input is a button called Submit that can be referenced later with jQuery. When this button is clicked a javascript function will store the input and create a new button with input string -->
+            <input id="add-animal" type="submit" value="Submit">
+          </form>
+        </div>
+
+        <div id='displayGifs'>
+          <div id="animals">
+            <!-- div with the animals id that is referenced with jquery -->
+            <!-- This is the divs the images/gifs are added to with the rating attatched -->
+          </div>
+        </div>
+      </div> 
+
+    </div>      <!-- end of content wrapper -->
 
   <footer class="footer">
     <div class="row">
@@ -88,7 +90,7 @@
         </div>
       </div>
   </footer>
-
+  </div>      <!-- End of page container-->
 
   <!-- importing the aJax library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

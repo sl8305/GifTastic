@@ -1,18 +1,29 @@
 body {
+    margin: 0px;
+    padding: 0px;
+
     /* giving background color and font styling for the body of the page */
-    font: 18px arial, sans-serif;
+    font: 16px "Times New Roman", Times, serif;
     background: #eee;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+#content-wrap {
+    padding-bottom: 140px;    /* Footer height */
 }
 
 /*      Navbar      */
 h1 {
-    color:  #eee;
+    color:  #212121 ;
     margin: 5%;
     padding: 5%;
 }
 
 h5 {
-    color:  #eee;
+    color:  #212121;
 }
 
 
@@ -46,7 +57,7 @@ input[type="submit"] {
     font-size: 18px;
     color: #fff;
     cursor: pointer;
-    background: #659a98;
+    background: #94bfa2;
     border: 0;
     border-radius: 5px;
     box-shadow: 2px 2px 3px #bbb;
@@ -79,12 +90,12 @@ button.active {
 }
 
 .botBorder {
-    border-bottom: 3px solid #659a98;
+    border-bottom: 3px solid #94bfa2;
 }
 
 #header {
     color: #eee;
-    background: #659a98;
+    background: #94bfa2;
 }
 
 #addRow {
@@ -108,8 +119,9 @@ button.active {
     bottom: 0px;
     text-align: center;
     width:100%;
-    background:#659a98;
-    color: #eee;
+    background:#94bfa2;
+    color: #212121;
+    height: 140px;
 }
 
 .footerText {
