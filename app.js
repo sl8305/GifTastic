@@ -6,10 +6,10 @@ $(document).ready(function() {
 
     // array of preset animals
     var animals = [
-      "dog", "cat", "rabbit", "skunk", "goldfish",
-      "bird", "ferret", "turtle", "sugar glider", "chinchilla",
-      "hedgehog", "hermit crab", "gerbil", "pygmy goat", "chicken",
-      "capybara", "teacup pig", "serval", "salamander", "frog"
+      "Dog", "Cat", "Rabbit", "Skunk", "Goldfish",
+      "Bird", "Ferret", "Turtle", "Sugar Glider", "Chinchilla",
+      "Hedgehog", "Hermit Crab", "Gerbil", "Pygmy Goat", "Chicken",
+      "Capybara", "Teacup Pig", "Serval", "Salamander", "Frog"
     ];
     
     // function dynamically adds buttons and assigns classes and text to each button
@@ -179,4 +179,10 @@ $(document).ready(function() {
     // it uses the array animals to loop through and create buttons for each index with the animal-button class and appends it to the animal-buttons div
     populateButtons(animals, "animal-button", "#animal-buttons");
   });
+
   
+  // Clears animal pictures (reset effect) when logo is clicked 
+  $(document).on('click', '#logo', function (){
+    $(animals).empty();
+    // console.log('bye');
+  });

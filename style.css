@@ -13,7 +13,9 @@ body {
 }
 
 #content-wrap {
-    /* padding-bottom: 140px;    Footer height */
+    min-height: 85vh;
+    max-height: fit-content;
+    overflow: hidden;
 }
 
 .row {
@@ -60,7 +62,7 @@ input[type="submit"] {
     padding: 5px 20px;
     margin: 0 10px 10px 0;
     font-size: 18px;
-    color: #fff;
+    color: #212121;
     cursor: pointer;
     background: #94bfa2;
     border: 0;
@@ -93,8 +95,9 @@ button.active {
 }
 
 #header {
-    color: #eee;
+    color: #212121;
     background: #94bfa2;
+    height: 10vh;
 }
 
 .nav-link{
@@ -103,34 +106,39 @@ button.active {
 }
 
 #displayGifs {
-    min-height: 100vh;
     overflow: hidden;
-    max-height: fit-content;
+    padding-bottom: 50px;
+    /* max-height: fit-content; */
 }
 
-.footer {
+footer {
     margin: auto;
     bottom: 0px;
     text-align: center;
     width:100%;
     background:#94bfa2;
     color: #212121;
-    height: 140px;
+    height: 15vh;
+    min-height: fit-content;
+
+    position: relative;
 }
 
-.footerText {
+.footerContent {
+    /* margin: auto;
+    width: 60%; */
     font-size: 16px;
-    margin: 0px;
     line-height: 1.5em;
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
     
 .footerIcon {
     height:50px;
     padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#learnMoreLinks {
-    margin: auto;
 }
